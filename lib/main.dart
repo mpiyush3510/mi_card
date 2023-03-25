@@ -16,18 +16,25 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
-          title: Text("Mi card"),
-        ),
-        body: Center(
-          child: Text('Hello Piyush'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.pink,
-          onPressed: () {},
-          child: Icon(Icons.heart_broken_outlined),
-        ),
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+            child: Column(
+          children: [
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('images/admin_sir.jpg'),
+            ),
+            Text(
+              "Piyush Makwana",
+              style: TextStyle(
+                fontFamily: 'IBMPlex',
+                fontWeight: FontWeight.bold,
+                fontSize: 27,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
