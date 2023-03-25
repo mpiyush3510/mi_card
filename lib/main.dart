@@ -20,6 +20,14 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.blueGrey,
           title: Text("Mi card"),
         ),
+        body: Center(
+          child: Text('Hello Piyush'),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.pink,
+          onPressed: () {},
+          child: Icon(Icons.heart_broken_outlined),
+        ),
       ),
     );
   }
