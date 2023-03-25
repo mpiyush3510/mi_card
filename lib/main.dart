@@ -19,6 +19,7 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -42,49 +43,39 @@ class _MyAppState extends State<MyApp> {
                   color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              Card(
                 margin: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
                 color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "mpiyush3510@gmail.com",
+                    style: TextStyle(
+                      fontWeight: FontWeight.normal,
                       color: Colors.teal,
+                      fontFamily: 'Martel',
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Mpiyush3510@gmail.com",
-                      style: TextStyle(
-                          color: Colors.teal,
-                          fontFamily: 'Martel',
-                          fontWeight: FontWeight.normal),
-                    )
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                child: Row(
-                  children: [
-                    Icon(Icons.call, color: Colors.teal),
-                    SizedBox(
-                      width: 10,
+                child: ListTile(
+                  leading: Icon(Icons.call, color: Colors.teal),
+                  title: Text(
+                    "+91 79907 64192",
+                    style: TextStyle(
+                      color: Colors.teal,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: 'Martel',
                     ),
-                    Text(
-                      "+91 79907 64192",
-                      style: TextStyle(
-                          fontFamily: 'Martel',
-                          fontWeight: FontWeight.normal,
-                          color: Colors.teal),
-                    ),
-                  ],
+                  ),
                 ),
-              )
+              ),
             ],
           ),
         ),
